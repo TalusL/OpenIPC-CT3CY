@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Prepare
         run: |
-            link=https://github.com/TalusL/OpenIPC-CT3CY/download/latest
+            link=https://github.com/TalusL/OpenIPC-CT3CY/releases/download/latest
             create() {
               uboot=u-boot-$1-nor.bin
               firmware=openipc.$2-nor-$3.tgz
