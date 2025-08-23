@@ -53,5 +53,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{env.TAG_NAME}}
-          make_latest: false
+          make_latest: true
           files: target/*.bin
