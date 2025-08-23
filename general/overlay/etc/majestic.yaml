@@ -7,7 +7,7 @@ system:
   unsafe: false
 isp:
   antiFlicker: disabled
-  iqServer: false
+  iqServer: true
   sensorConfig: /etc/sensors/sc3335.bin
 image:
   mirror: false
@@ -65,7 +65,6 @@ nightMode:
   maxThreshold: 3000
   minThreshold: 3000
   overrideDrc: 4
-  irCutPin2: 77
 motionDetect:
   enabled: false
   visualize: false
