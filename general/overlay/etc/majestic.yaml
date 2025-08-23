@@ -1,0 +1,86 @@
+system:
+  webPort: 80
+  httpsPort: 443
+  logLevel: debug
+  buffer: 1024
+  plugins: false
+  unsafe: false
+isp:
+  antiFlicker: disabled
+  iqServer: false
+  sensorConfig: /etc/sensors/sc3335.bin
+image:
+  mirror: false
+  flip: false
+  rotate: 0
+  contrast: 50
+  hue: 50
+  saturation: 50
+  luminance: 50
+video0:
+  enabled: true
+  codec: h264
+  fps: 20
+  bitrate: 4096
+  rcMode: vbr
+  gopSize: 1
+video1:
+  enabled: false
+  codec: h264
+  size: 704x576
+  fps: 15
+jpeg:
+  enabled: true
+  qfactor: 100
+  fps: 5
+  rtsp: false
+osd:
+  enabled: true
+  font: /usr/share/fonts/truetype/UbuntuMono-Regular.ttf
+  template: '%d.%m.%Y %H:%M:%S'
+  posX: 16
+  posY: 16
+  size: 1.0
+  privacyMasks: true
+audio:
+  enabled: true
+  volume: 30
+  srate: 8000
+  codec: opus
+  outputEnabled: true
+  outputVolume: 30
+  speakerPin: 61
+  speakerPinInvert: false
+rtsp:
+  enabled: true
+  port: 554
+nightMode:
+  colorToGray: true
+  irCutSingleInvert: false
+  lightMonitor: false
+  lightSensorInvert: false
+  irCutPin1: 16
+  backlightPin: 76
+  monitorDelay: 5
+  maxThreshold: 3000
+  minThreshold: 3000
+  overrideDrc: 4
+  irCutPin2: 77
+motionDetect:
+  enabled: false
+  visualize: false
+  debug: false
+records:
+  enabled: false
+  path: /mnt/mmcblk0p1/%F
+  split: 20
+  maxUsage: 95
+outgoing:
+  enabled: false
+watchdog:
+  enabled: true
+  timeout: 300
+hls:
+  enabled: false
+onvif:
+  enabled: true
