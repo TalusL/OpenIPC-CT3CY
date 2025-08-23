@@ -13,7 +13,6 @@ detect_sensor() {
 
 set_sensor() {
 		insmod $MODULE/sc3335.ko chmap=1
-		echo -e "\n\e[1;31mUNSUPPORTED sensor - $SENSOR\e[0m\n" | logger -s -t OpenIPC
 }
 
 insert_ko() {
