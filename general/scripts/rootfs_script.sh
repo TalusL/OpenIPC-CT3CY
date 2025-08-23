@@ -23,3 +23,4 @@ if [ -f ${LIST} ]; then
 fi
 
 chmod +x ${TARGET_DIR}/etc/init.d/S34WIFI
+chmod +x ${TARGET_DIR}/etc/init.d/S99WLAN0
