@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Prepare
         run: |
-            link=https://github.com/openipc/firmware/releases/download/latest
+            link=https://github.com/TalusL/OpenIPC-CT3CY/download/latest
             create() {
               uboot=u-boot-$1-nor.bin
               firmware=openipc.$2-nor-$3.tgz
@@ -44,15 +44,10 @@ jobs:
               echo -e "Created: $release\n"
             }
 
-            for soc in $SIGMASTAR $ALLWINNER; do
-              create $soc $soc lite
-              create $soc $soc ultimate
-            done
 
-            for soc in $INGENIC; do
-              create $soc ${soc:0:3} lite
-              create $soc ${soc:0:3} ultimate
-            done
+            create ssc335 ssc335 lite
+
+           mv openipc-ssc335-nor-lite.bin openipc-ct3cy-full.bin
 
       - name: Upload
         uses: softprops/action-gh-release@v2
