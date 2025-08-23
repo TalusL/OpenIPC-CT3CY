@@ -21,3 +21,5 @@ LIST="${BR2_EXTERNAL_GENERAL_PATH}/scripts/excludes/${OPENIPC_SOC_MODEL}_${OPENI
 if [ -f ${LIST} ]; then
 	xargs -a ${LIST} -I % rm -f ${TARGET_DIR}%
 fi
+
+chmod +x ${TARGET_DIR}/etc/init.d/S34WIFI
