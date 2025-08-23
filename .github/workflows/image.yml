@@ -47,7 +47,7 @@ jobs:
 
             create ssc335 ssc335 lite
 
-            mv target/openipc-ssc335-nor-lite.bin target/openipc-ct3cy-full.bin
+            mv target/openipc-ssc335-nor-lite.bin target/openipc-CT3CY-full.bin
 
       - name: Upload
         uses: softprops/action-gh-release@v2
