@@ -37,7 +37,7 @@ jpeg:
 osd:
   enabled: true
   font: /usr/share/fonts/truetype/UbuntuMono-Regular.ttf
-  template: '%d.%m.%Y %H:%M:%S'
+  template: '%Y-%m-%d %H:%M:%S'
   posX: 16
   posY: 16
   size: 1.0
@@ -46,10 +46,10 @@ audio:
   enabled: true
   volume: 30
   srate: 8000
-  codec: opus
+  codec: alaw
   outputEnabled: true
   outputVolume: 30
-  speakerPin: 61
+  speakerPin: 160
   speakerPinInvert: false
 rtsp:
   enabled: true
