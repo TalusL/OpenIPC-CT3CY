@@ -25,4 +25,4 @@ fi
 chmod +x ${TARGET_DIR}/etc/init.d/S34WIFI
 chmod +x ${TARGET_DIR}/etc/init.d/S99WLAN0
 chmod +x ${TARGET_DIR}/etc/init.d/S99MOTOR
-chmod +x ${TARGET_DIR}/etc/init.d/S99WSD
+chmod +x ${TARGET_DIR}/etc/init.d/S92WSD
