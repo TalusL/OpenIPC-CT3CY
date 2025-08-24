@@ -10,6 +10,10 @@
 ### OpenIPC for CT3CY features
 ✅ PREVIEW
 
+✅ OSD
+
+✅ AUDIO
+
 ✅ RECORD
 
 ✅ RTSP
