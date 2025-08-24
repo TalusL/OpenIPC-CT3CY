@@ -1,3 +1,21 @@
+##TL-LINK CT3CY SSC335 + SC3335
+### Hardware pinout
+- ir-led & ir-cut GPIO16
+- GREEN-LED GPIO76
+- RED-LED GPIO77
+- MOTOR-X-ABCD GPIO44 GPIO45 GPIO46 GPIO47
+- MOTOR-Y-ABCD GPIO61 GPIO78 GPIO79 GPIO80
+
+### OpenIPC for CT3CY feature
+✅ PREVIEW
+✅ RECORD
+✅ RTSP
+✅ ONVIF PREVIEW
+✅ ONVIF PTZ
+✅ DAY NIGHT MODEL
+
+
+
 ![OpenIPC logo][logo]
 
 ## Alternative open firmware for your IP camera
