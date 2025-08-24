@@ -1,4 +1,4 @@
-##TL-LINK CT3CY SSC335 + SC3335
+## TL-LINK CT3CY SSC335 + SC3335
 ### Hardware pinout
 - ir-led & ir-cut GPIO16
 - GREEN-LED GPIO76
