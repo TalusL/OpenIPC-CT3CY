@@ -16,4 +16,5 @@
 /lib/modules/4.9.84/sigmastar/sensor_sc3338_mipi.ko
 /lib/modules/4.9.84/sigmastar/sensor_sc401ai_mipi.ko
 /lib/modules/4.9.84/kernel/fs/nfs
+/lib/modules/4.9.84/kernel/fs/nfs_common
 /lib/modules/4.9.84/kernel/net/sunrpc
