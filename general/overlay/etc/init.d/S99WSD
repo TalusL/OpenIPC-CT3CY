@@ -1,0 +1,11 @@
+#!/bin/sh
+ONVIF_CONFIG="/etc/onvif.conf"
+HTTPD_CONFIG="/etc/httpd_onvif.conf"
+WWW_PATH="/var/www"
+ONVIF_PORT=$(awk -F= '/^port=/{print $2}' ${ONVIF_CONFIG})
+start() {
+wsd_simple_server -i eth0 -m OpenIPC -n CT3CY -p /tmp/wsd_eth0.pid  -x http://%s:$ONVIF_PORT/onvif/device_service
+}
+stop(){
+killall -9 wsd_simple_server
+}
