@@ -1,0 +1,33 @@
+#!/bin/sh
+ONVIF_CONFIG="/etc/onvif.conf"
+HTTPD_CONFIG="/etc/httpd_onvif.conf"
+WWW_PATH="/var/www"
+ONVIF_PORT=$(awk -F= '/^port=/{print $2}' ${ONVIF_CONFIG})
+DAEMON="wsd_server"
+PIDFILE="/var/run/wsd_server_eth0.pid"
+
+start() {
+echo start wsd server at $ONVIF_PORT
+wsd_simple_server -i eth0 -m OpenIPC -n CT3CY -p $PIDFILE  -x http://%s:$ONVIF_PORT/onvif/device_service
+}
+
+stop(){
+kill -9
+}
+
+case "$1" in
+        start|stop)
+                $1
+                ;;
+
+        restart)
+                stop
+                sleep 3
+                start
+                ;;
+
+        *)
+                echo "Usage: $0 {start|stop|restart}"
+                exit 1
+                ;;
+esac
