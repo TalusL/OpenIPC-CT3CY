@@ -8,11 +8,17 @@
 
 ### OpenIPC for CT3CY feature
 ✅ PREVIEW
+
 ✅ RECORD
+
 ✅ RTSP
+
 ✅ ONVIF PREVIEW
+
 ✅ ONVIF PTZ
+
 ✅ DAY NIGHT MODEL
+
 
 
 
