@@ -1,0 +1,6 @@
+#!/bin/sh
+MOTORS=$(fw_printenv -n gpio_motors)
+if [ -z "$MOTORS" ]; then
+        echo -e "\n\e[1;33mSet MOTORS.\e[0m\n" | logger -s -t OpenIPC
+        fw_setenv gpio_motors '44 45 46 47 61 78 79 80'
+fi
