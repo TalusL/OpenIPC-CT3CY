@@ -82,4 +82,4 @@ watchdog:
 hls:
   enabled: false
 onvif:
-  enabled: true
+  enabled: false
