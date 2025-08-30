@@ -28,6 +28,8 @@
 
 ✅ LAN NETWORK
 
+![CT3CY](https://github.com/TalusL/OpenIPC-CT3CY/blob/master/IMG_20250830_225411.jpg)
+
 
 
 
