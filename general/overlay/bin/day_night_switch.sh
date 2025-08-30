@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 配置参数 - 可根据需要修改
-DAY_THRESHOLD=1250       # 低于此值进入白天模式
+DAY_THRESHOLD=1190       # 低于此值进入白天模式
 NIGHT_THRESHOLD=10000    # 高于此值进入黑夜模式
 CHECK_INTERVAL=5         # 检查间隔时间(秒)
 METRICS_URL="localhost/metrics/isp?value=isp_again"  # 获取亮度值的URL
