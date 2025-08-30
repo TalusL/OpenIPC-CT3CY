@@ -26,3 +26,5 @@ chmod +x ${TARGET_DIR}/etc/init.d/S34WIFI
 chmod +x ${TARGET_DIR}/etc/init.d/S99WLAN0
 chmod +x ${TARGET_DIR}/etc/init.d/S99MOTOR
 chmod +x ${TARGET_DIR}/etc/init.d/S92WSD
+chmod +x ${TARGET_DIR}/etc/init.d/S99DayNight
+chmod +x ${TARGET_DIR}/bin/day_night_switch.sh
