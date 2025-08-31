@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 配置参数 - 可根据需要修改
-DAY_THRESHOLD=1190       # 低于此值进入白天模式
+DAY_THRESHOLD=1400       # 低于此值进入白天模式
 NIGHT_THRESHOLD=10000    # 高于此值进入黑夜模式
 CHECK_INTERVAL=5         # 检查间隔时间(秒)
 METRICS_URL="localhost/metrics/isp?value=isp_again"  # 获取亮度值的URL
@@ -31,16 +31,16 @@ switch_to_day
 while true; do
     # 获取亮度值
     daynight_value=$(wget -q -T1 $METRICS_URL -O -)
-    
+
     # 检查获取值是否成功
     if [ -z "$daynight_value" ]; then
         echo "获取亮度值失败，将重试..."
         sleep $CHECK_INTERVAL
         continue
     fi
-    
+
     echo "当前亮度值: $daynight_value, 当前模式: $current_mode"
-    
+
     # 根据当前模式和亮度值决定是否切换模式
     if [ "$current_mode" = "day" ] || [ -z "$current_mode" ]; then
         # 当前是白天模式或初始状态，检查是否需要切换到黑夜模式
@@ -49,12 +49,11 @@ while true; do
         fi
     else
         # 当前是黑夜模式，检查是否需要切换到白天模式
-        if [ $daynight_value -gt $DAY_THRESHOLD ]; then
+        if [ $daynight_value -lt $DAY_THRESHOLD ]; then
             switch_to_day
         fi
     fi
-    
+
     # 等待指定时间后再次检查
     sleep $CHECK_INTERVAL
 done
-
